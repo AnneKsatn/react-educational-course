@@ -7,6 +7,7 @@ import ReactDom from 'react-dom'
 import AppHeader from './components/app-header'
 import TodoList from './components/todo-list'
 import SearchPanel from './components/search-panel'
+import App from './components/app/app'
 
 
 const Theory = () => {
@@ -19,34 +20,4 @@ const Theory = () => {
     )
 }
 
-const App = () => {
-
-    const todoData = [
-        {
-            label: "Drink Coffee",
-            important: false
-        },
-        {
-            label: "To do React App",
-            important: true
-        },
-        {
-            label: "Have a lunch",
-            important: false
-        }
-    ]
-
-    return (
-        <div>
-            <AppHeader />
-            <SearchPanel />
-            <TodoList todos={todoData}/>
-            <Theory />
-        </div>
-    )
-}
-
-// const el = React.createElement('h1', null, 'Hello world')
-
-// Первым элементов принимает REACT ЭЛЕМЕНТ, не КОМПОНЕНТ.
 ReactDom.render(<App />, document.getElementById('root'))

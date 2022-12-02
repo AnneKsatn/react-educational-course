@@ -1,19 +1,23 @@
 import React from "react";
-import TodoListItem from "./todo-list-item";
+import TodoListItem from "../todo-list-item";
+import './todo-list.css';
 
 // С большой буквы - требование реакта. Отличает наши компоненты от html тегов. С маленькой буквы - теги, с большой - наши компоненты.
 const TodoList = ({todos}) => {
 
     const elements = todos.map((item) => {
+
+        const {id, ...itemProps} = item
+
         return (
-            <li>
-                <TodoListItem {...item}/>
+            <li key={id} className="list-group-item">
+                <TodoListItem {...itemProps}/>
             </li>
         )
     });
 
     return (
-        <ul>
+        <ul className="list-group todo-list">
             { elements }
         </ul>
     )
