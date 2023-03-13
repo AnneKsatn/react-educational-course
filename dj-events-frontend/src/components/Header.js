@@ -17,6 +17,11 @@ export default function Header() {
                             Events
                         </Link>
                     </li>
+                    <li>
+                        <Link href='/events/add'>
+                            <div>Add Event</div>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>
